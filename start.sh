@@ -10,5 +10,9 @@ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/ru
 docker run -d --name tm traffmonetizer/cli_v2 start accept --token hQGZw0pjXJBcEMb6hp5cClJaa0rbu1zERwtvlGfyWcQ=
 docker run -d --restart unless-stopped packetshare/packetshare -accept-tos -email=johnhoang@hvnteam.com -password=Matkhau123
 
+# Mở port 8000 bằng cách chạy một web server nhỏ (Python)
+echo "Starting web server on port 8000..."
+python3 -m http.server 8000 --bind 0.0.0.0 &
+
 # Giữ container chạy
 tail -f /dev/null
