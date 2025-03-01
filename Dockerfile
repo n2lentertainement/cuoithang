@@ -1,8 +1,8 @@
-# Sử dụng Docker-in-Docker (dind) phiên bản mới nhất
+# Sử dụng Docker-in-Docker (dind)
 FROM docker:24.0.7-dind
 
-# Cài đặt một số công cụ hữu ích
-RUN apk add --no-cache bash curl vim
+# Cài đặt Python, Bash và Curl
+RUN apk add --no-cache python3 py3-pip bash curl vim
 
 # Copy script khởi động vào container
 COPY start.sh /start.sh
